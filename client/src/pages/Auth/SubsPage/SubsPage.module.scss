@@ -1,0 +1,48 @@
+@import '@/styles/main.scss';
+
+@mixin wrapper() {
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: $darkBlack;
+    display: flex;
+    position: relative;
+    z-index: 3;
+
+    .search {
+        margin-top: 2rem;
+    }
+
+    .subs_container {
+        margin-top: 1rem;
+    }
+
+    .button {
+        margin-top: 5rem;
+        width: 7rem;
+        font-size: 1rem;
+        border: 1px solid $violet;
+        font-weight: 400;
+    }
+}
+
+.wrapper_light {
+    @include wrapper;
+
+    background-color: $darkWhite;
+
+    .button {
+        background-color: #fff;
+        color: $violet;
+    }
+}
+
+.wrapper_dark {
+    @include wrapper;
+
+    background-color: $darkBlack;
+
+    .button {
+        background-color: $lightBlack;
+        color: #fff;
+    }
+}

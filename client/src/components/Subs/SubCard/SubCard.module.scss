@@ -1,0 +1,201 @@
+@import '@/styles/main.scss';
+
+@mixin theme() {
+    padding: 0.5rem 1rem 1rem 1rem;
+    height: 8rem;
+    border-radius: 1rem;
+    background-color: $lightBlack;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    h3 {
+        margin-left: 1rem;
+        font-size: 0.9rem;
+        text-decoration: underline;
+        text-underline-offset: 0.5rem;
+        font-weight: 600;
+    }
+
+    .first_line {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        margin-top: 0.6rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .price_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+
+        .price {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            font-size: 0.9rem;
+            border: 1px solid $orange;
+            padding: 0.3rem;
+            border-radius: 0.5rem;
+        }
+
+        .separator {
+            display: inline-block;
+            margin-top: 1rem;
+            border-bottom: 1px solid $lightGray;
+            width: 2rem;
+        }
+    }
+
+    .bottom {
+        display: flex;
+        justify-content: space-between;
+
+        .date,
+        .bound_card {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .date {
+            .clock_icon {
+                width: 0.8rem;
+
+                & + span {
+                    font-size: 0.75rem;
+                    color: $lightGray;
+                }
+            }
+        }
+
+        .bound_card {
+            .card_icon {
+                width: 1rem;
+
+                & + span {
+                    font-size: 0.85rem;
+                }
+            }
+        }
+    }
+}
+
+.card_light {
+    @include theme();
+
+    background-color: #fff;
+    color: $black;
+}
+
+.card_dark {
+    @include theme();
+
+    background-color: $lightBlack;
+    color: $darkWhite;
+}
+
+// .card {
+//     color: $darkWhite;
+//     margin: 1rem;
+//     padding: .5rem 1rem 1rem 1rem;
+//     width: 100%;
+//     height: 8rem;
+//     border-radius: 1rem;
+//     background-color: $lightBlack;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+
+//     &:hover {
+//         cursor: pointer;
+//     }
+
+//     h3 {
+//         margin-left: 1rem;
+//         font-size: .9rem;
+//         text-decoration: underline;
+//         text-underline-offset: .5rem;
+//         font-weight: 600;
+//     }
+
+//     .first_line {
+//         display: flex;
+//         align-items: center;
+//     }
+
+//     .logo {
+//         margin-top: .6rem;
+//         width: 1.5rem;
+//         height: 1.5rem;
+//     }
+
+//     .price_container {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         margin-left: auto;
+
+//         .price {
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             margin-left: auto;
+//             font-size: .9rem;
+//             border: 1px solid $orange;
+//             padding: .3rem;
+//             border-radius: .5rem;
+//         }
+
+//         .separator {
+//             display: inline-block;
+//             margin-top: 1rem;
+//             border-bottom: 1px solid $lightGray;
+//             width: 2rem;
+//         }
+//     }
+
+//     .bottom {
+//         display: flex;
+//         justify-content: space-between;
+
+//         .date, .bound_card {
+//             display: flex;
+//             align-items: center;
+//             gap: .5rem;
+//         }
+
+//         .date {
+//             .clock_icon {
+//                 width: .8rem;
+
+//                 & + span {
+//                     font-size: .75rem;
+//                     color: $lightGray;
+//                 }
+//             }
+
+//         }
+
+//         .bound_card {
+//             .card_icon {
+//                 width: 1rem;
+
+//                 & + span {
+//                     font-size: .85rem;
+//                 }
+//             }
+//         }
+
+//     }
+// }

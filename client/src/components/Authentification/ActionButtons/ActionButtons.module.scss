@@ -1,0 +1,35 @@
+@import '@/styles/main.scss';
+    
+.buttons_container {
+    margin-top: 2rem; 
+    display: flex;
+    gap: 1rem;
+    z-index: 3;
+
+    .login_btn, .register_btn {
+        width: 10rem;    
+        transition: background-color .2s ease-in-out;
+    }
+
+    .login_btn {
+        &:hover {
+            background-color: $orange;
+            border-color: $darkWhite; 
+        }
+    }   
+
+    .register_btn {
+        border-color: $orange;
+        background-color: $darkWhite;
+        color: black;
+
+        &:hover {
+            background: none;
+            color: $darkWhite;
+        }
+    }
+}
+
+.slide_up_modal {
+    padding: 2rem;
+}

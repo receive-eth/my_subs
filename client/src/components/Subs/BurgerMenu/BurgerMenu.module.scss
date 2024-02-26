@@ -1,0 +1,82 @@
+@import '@/styles/main.scss';
+
+
+.wrapper {    
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}    
+
+
+.burger_menu {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    justify-content: center;
+    border-radius: .5rem;
+    padding: .3rem;
+    border: none;
+    background-color: inherit;
+
+    width: 2rem;
+    height: 2rem;
+    transition: all .2s ease;
+
+    span:nth-child(1), 
+    span:nth-child(2), 
+    span:nth-child(3), 
+    span:nth-child(4) {
+        transition: all .2s ease-in-out;
+        display: inline-block;
+        height: 2px;
+        border-radius: 1px;
+    }
+
+    span:nth-child(1) {
+        width: 60%;
+        background-color: $violet;
+    }
+
+    span:nth-child(2) {
+        width: 85%;
+        background-color: $orange;
+    }
+
+    span:nth-child(3) {
+        width: 50%;
+        background-color: $violet;
+    }
+
+    span:nth-child(4) {
+        width: 80%;
+        background-color: $orange;
+    }
+
+    &:hover {
+        cursor: pointer;    
+    }
+}
+
+
+.animated {
+    transform: rotate(90deg);
+
+        span:nth-child(1) {
+            width: 55%;
+            text-align: right;
+        }
+
+        span:nth-child(2) {
+            width: 65%;        
+        }
+
+        span:nth-child(3) {
+            width: 75%;        
+        }
+
+        span:nth-child(4) {
+            width: 85%;        
+        }
+}
+

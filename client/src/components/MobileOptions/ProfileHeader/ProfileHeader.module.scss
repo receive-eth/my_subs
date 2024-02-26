@@ -1,0 +1,60 @@
+@import '@/styles/main.scss';
+
+@mixin profile_header() {
+    padding-top: 1rem;
+    height: 16rem;
+    width: 100%;
+    border-bottom-right-radius: 3.5rem;
+    border-bottom-left-radius: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .user_icon {
+        margin-top: 1rem;
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .text_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user_name {
+        margin-top: 1rem;
+        font-size: 1.4rem;
+        color: $darkWhite;
+    }
+
+    .underline {
+        margin-top: 0.5rem;
+        border-bottom: 2px solid $darkWhite;
+        width: 80%;
+    }
+
+    .back_button {
+        display: flex;
+        align-items: center;
+        font-size: 1.4rem;
+        background: none;
+        border: none;
+        color: $darkWhite;
+        margin-left: 0;
+        margin-right: auto;
+        height: 2rem;
+    }
+}
+
+.profile_header_light {
+    @include profile_header;
+
+    background-color: $violet;
+}
+
+.profile_header_dark {
+    @include profile_header;
+
+    background-color: $lightBlack;
+}

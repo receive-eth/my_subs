@@ -1,0 +1,40 @@
+@import '@/styles/main.scss';
+
+@mixin heading() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 200;
+
+    .underline {
+        margin-top: 0.5rem;
+        width: 6rem;
+        border-bottom: 2px solid $black;
+    }
+}
+
+.heading_light {
+    @include heading;
+
+    color: $black;
+
+    .underline {
+        color: $black;
+        border-bottom: 2px solid $black;
+    }
+}
+
+.heading_dark {
+    @include heading;
+
+    color: #fff;
+
+    .underline {
+        color: $black;
+        border-bottom: 2px solid #fff;
+    }
+}

@@ -1,0 +1,72 @@
+@import '@/styles/main.scss';
+    
+.switch {
+    display: inline-block;
+    position: relative;
+    width: 3rem;
+    height: 1.5rem;
+    background: none;
+    border-radius: 1rem;
+
+    &:hover {
+        cursor: pointer;    
+    }
+}
+
+.hidden_input {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+
+    // &:focus + .switch_slider:before {
+    //     outline: 1px solid $gray;   
+    // }
+
+    &:checked + .switch_slider {
+        background-color: $lightBlack;
+    }
+
+    &:checked + .switch_slider::before {
+        transform: translate(2.04rem, -50%);
+        right: 2rem;
+        left: 0;
+        background-color: yellow;
+    }
+
+    &:active + .switch_slider {
+        outline: none;
+    }
+
+    &:active + .switch_slider {
+        outline: none;
+    }
+}
+
+.switch_slider {
+    border: 2px solid $violet;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 1rem;
+    background-color: $violet;
+    border: 2px solid #fff;
+
+    &::before {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        cursor: pointer;
+
+        top: 50%;
+        transform: translateY(-50%);
+
+        left: .2rem;
+        width: .5rem;
+        height: .5rem;
+        background-color: $orange; 
+        transition: transform .4s, color .2s ease-in-out;
+    }
+}
+

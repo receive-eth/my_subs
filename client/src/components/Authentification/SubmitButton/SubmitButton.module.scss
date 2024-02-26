@@ -1,0 +1,34 @@
+@import '@/styles/main.scss';
+
+@mixin submit_button() {
+    margin-top: auto;
+    margin-bottom: 0;
+
+    width: 10rem;
+    font-weight: 400;
+    border-color: $orange;
+    color: $orange;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        color: $violet;
+        border-color: $violet;
+    }
+
+    &:focus {
+        outline: 2px solid $violet;
+        color: $violet;
+    }
+}
+
+.submit_button_light {
+    @include submit_button;
+
+    background-color: #fff;
+}
+
+.submit_button_dark {
+    @include submit_button;
+
+    background-color: lighten($darkBlack, 5%);
+}

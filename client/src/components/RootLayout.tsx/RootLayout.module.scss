@@ -1,0 +1,16 @@
+@import '@/styles/main.scss';
+
+.root_layout_light {
+    background-color: $violet; 
+}
+
+.root_layout_dark {
+    background-color: $darkBlack;
+}
+
+.main {
+    margin: 0 auto;
+    // padding: 2rem;
+    // max-width: 1280px;
+    // text-align: center;
+}

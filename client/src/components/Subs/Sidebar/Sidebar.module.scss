@@ -1,0 +1,127 @@
+@import '@/styles/main.scss';
+
+
+@mixin sidebar() {
+    position: fixed;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+
+    @include tablet {
+        display: none;
+    }
+
+    .theme_switcher {
+        margin-top: 2rem;    
+    }
+
+    .action_links {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        height: 100%;
+
+        a:last-child {
+            margin-top: auto;
+        } 
+    }
+
+    .logout_icon {
+        width: 1.4rem;
+    }
+}
+
+.sidebar_light {
+    @include sidebar;
+
+    background-color: $violet;
+}
+
+.sidebar_dark {
+    @include sidebar;
+
+    background-color: $lightBlack;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+// .sidebar {
+//     height: 100%;
+//     width: 5rem;
+
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     padding: 2rem 3rem;
+//     border-top-right-radius: 20%;
+//     border-bottom-right-radius: 20%;
+// }
+
+// .sidebar_light {
+//     background-color: $violet;
+// }
+
+// .sightbar_dark {
+//     background-color: $lightBlack;
+// }
+
+// .theme_switcher {
+//     margin-top: 2rem;    
+// }
+
+// .action_links {
+//     margin-top: 4rem;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 4rem;
+//     height: 100%;
+
+//     a:last-child {
+//         margin-top: auto;
+//     } 
+// }
+

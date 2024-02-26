@@ -1,0 +1,30 @@
+@import '@/styles/main.scss';
+
+.modal_window {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $darkBlack;
+}
+
+@mixin modal_window() {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.modal_window_light {
+    @include modal_window;
+
+    background-color: $darkWhite;
+}
+
+.modal_window_dark {
+    @include modal_window;
+
+    background-color: $darkBlack;
+}

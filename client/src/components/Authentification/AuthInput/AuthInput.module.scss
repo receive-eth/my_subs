@@ -1,0 +1,111 @@
+@import '@/styles/main.scss';
+
+@mixin auth_input() {
+    display: flex;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+
+    .input {
+        width: 100%;
+        padding: 1rem;
+        padding-top: 2rem;
+        font-size: 1.2rem;
+        border: none;
+        background: none;
+        margin-left: 1rem;
+        padding-left: 0.2rem;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:focus {
+            + .label {
+                top: 0.2rem;
+                left: 2rem;
+                transform: scale(0.8);
+                margin-left: 1rem;
+            }
+        }
+
+        &:not(:focus):valid {
+            + .label {
+                top: 0.2rem;
+                left: 2rem;
+                transform: scale(0.8);
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    .label {
+        // margin-left: 1rem;
+        position: absolute;
+        font-size: 1.1rem;
+        top: 50%;
+        left: 2rem;
+        transform: translate(2rem, -50%);
+        pointer-events: none;
+        transition: all 0.3s;
+    }
+
+    .icon,
+    .optional_right_icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.auth_input_light {
+    @include auth_input;
+
+    background-color: #fff;
+
+    .input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    }
+
+    .label {
+        color: $gray;
+    }
+}
+
+.auth_input_dark {
+    @include auth_input;
+
+    background-color: lighten($darkBlack, 10%);
+
+    .input {
+        color: #fff;
+
+        &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0px 1000px lighten($darkBlack, 10%) inset !important;
+            -webkit-text-fill-color: #fff !important;
+            caret-color: #fff !important;
+        }
+    }
+
+    .label {
+        color: $lightGray;
+    }
+}
+
+.focused {
+    outline: 2px solid $orange;
+    border: none;
+}
+
+.errored {
+    outline: 2px solid red;
+    border: none;
+}
+
+.input_message {
+    margin-left: 0.5rem;
+    margin-top: 0.2rem;
+    color: red;
+}
